@@ -134,7 +134,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
-      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)msvcp14xd_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
@@ -163,7 +163,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
-      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)msvcp14xd_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>User32.lib;$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>

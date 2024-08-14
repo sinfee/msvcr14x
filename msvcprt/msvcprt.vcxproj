@@ -103,7 +103,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>msvcp14x_dynamic_part.lib;msvcp14x_1d.lib;msvcp14x_2d.lib;msvcp14xd_atomic_wait.lib;msvcp14xd_codecvt_ids.lib;msvcp14x_static_part.lib</AdditionalDependencies>
+      <AdditionalDependencies>msvcp14xd_dynamic_part.lib;msvcp14x_1d.lib;msvcp14x_2d.lib;msvcp14xd_atomic_wait.lib;msvcp14xd_codecvt_ids.lib;msvcp14xd_static_part.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4006 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
@@ -152,7 +152,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>msvcp14x_dynamic_part.lib;msvcp14x_1d.lib;msvcp14x_2d.lib;msvcp14xd_atomic_wait.lib;msvcp14xd_codecvt_ids.lib;msvcp14x_static_part.lib</AdditionalDependencies>
+      <AdditionalDependencies>msvcp14xd_dynamic_part.lib;msvcp14x_1d.lib;msvcp14x_2d.lib;msvcp14xd_atomic_wait.lib;msvcp14xd_codecvt_ids.lib;msvcp14xd_static_part.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4006 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
