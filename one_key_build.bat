@@ -30,12 +30,12 @@ if not exist ../ntdll (
 )
 git -C ../ntdll pull -v --progress "origin"
 
-:check_math-boost
-if not exist ../math-boost (
-  git clone https://github.com/boostorg/math.git ../math-boost
-  goto :check_math-boost
+:check_boost-math
+if not exist ../boost-math (
+  git clone https://github.com/boostorg/math.git ../boost-math
+  goto :check_boost-math
 )
-cd ../math-boost
+cd ../boost-math
 git checkout tags/boost-1.86.0
 cd %~dp0
   
