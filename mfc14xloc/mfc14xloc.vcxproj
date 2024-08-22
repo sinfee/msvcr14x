@@ -74,7 +74,6 @@ del MFC14XCHT.DLL
 del MFC14XKOR.DLL
 del MFC14XRUS.DLL
 del MFC14XENU.DLL</NMakeCleanCommandLine>
-    <IntDir>$(DevelopTemp)\$(SolutionName)\$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
@@ -112,7 +111,6 @@ del MFC14XCHT.DLL
 del MFC14XKOR.DLL
 del MFC14XRUS.DLL
 del MFC14XENU.DLL</NMakeCleanCommandLine>
-    <IntDir>$(DevelopTemp)\$(SolutionName)\$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>

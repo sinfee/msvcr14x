@@ -125,6 +125,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <BaseAddress>0x40100000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -153,6 +154,7 @@
       <BaseAddress>0x401000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -183,6 +185,7 @@
       <ImportLibrary>$(OutDir)ucrt.lib</ImportLibrary>
       <BaseAddress>0x50100000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -211,6 +214,7 @@
       <BaseAddress>0x501000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

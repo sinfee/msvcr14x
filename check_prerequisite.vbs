@@ -22,11 +22,17 @@ Sub CheckPrerequisite()
     If Len(VS_EDITION) = 0 Then
         VS_EDITION = "Enterprise"
     End If
+
+	If VS_EDITION = "Preview" Then
+		EXEC_FIND_VS="C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -version 17.0  -prerelease -latest -property installationPath"	
+	Else
+		EXEC_FIND_VS="C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product." & VS_EDITION	
+	End If
     
     Dim VS_PATH
     Do
         Set ExeProc = Nothing
-        Set ExeProc = objShell.Exec("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product." & VS_EDITION)
+        Set ExeProc = objShell.Exec(EXEC_FIND_VS)
         If ExeProc Is Nothing = False Then
             VS_PATH = ExeProc.StdOut.ReadLine()
             If fs.FolderExists(VS_PATH) Then

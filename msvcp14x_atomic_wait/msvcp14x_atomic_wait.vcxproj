@@ -117,6 +117,7 @@
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <BaseAddress>0x50800000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -146,6 +147,7 @@
       <BaseAddress>0x40800000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -175,6 +177,7 @@
       <BaseAddress>0x408000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -204,6 +207,7 @@
       <BaseAddress>0x508000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -118,6 +118,7 @@
       <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <BaseAddress>0x50300000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -147,6 +148,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <BaseAddress>0x40300000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -176,6 +178,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <BaseAddress>0x403000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -205,6 +208,7 @@
       <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
       <BaseAddress>0x503000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

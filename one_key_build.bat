@@ -7,6 +7,7 @@ if not defined ID (
   ECHO.1.Enterprise
   ECHO.2.Professional
   ECHO.3.Community
+  ECHO.4.Preview
   echo.Please enter the order number of your selected item:
   
   set /p ID=
@@ -14,6 +15,7 @@ if not defined ID (
 if "%id%"=="1" SET VS_EDITION=Enterprise
 if "%id%"=="2" SET VS_EDITION=Professional
 if "%id%"=="3" SET VS_EDITION=Community
+if "%id%"=="4" SET VS_EDITION=Preview
 if not defined VS_EDITION EXIT
 
 WScript check_prerequisite.vbs
@@ -48,7 +50,11 @@ git -C ../YY-Thunks pull -v --progress "origin"
 
 WScript ../ntdll/setup.vbs
 
-for /f "delims=" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product.%VS_EDITION%') do set "VS_PATH=%%i"
+if "%id%"=="4" (
+    for /f "delims=" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 17.0 -prerelease -latest -property installationPath') do set "VS_PATH=%%i"
+) else (
+    for /f "delims=" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product.%VS_EDITION%') do set "VS_PATH=%%i"
+)
 
 @ECHO ON
 CALL "%VS_PATH%\VC\Auxiliary\Build\vcvars32.bat"

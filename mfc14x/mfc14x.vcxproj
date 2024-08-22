@@ -134,6 +134,7 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14XD</TargetName>
     <OutDir>$(SolutionDir)Debug\</OutDir>
+    <IntDir>$(DevelopTemp)\$(SolutionName)\$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -144,6 +145,7 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14X</TargetName>
     <OutDir>$(SolutionDir)Release\</OutDir>
+    <IntDir>$(DevelopTemp)\$(SolutionName)\$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -154,6 +156,7 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14XD</TargetName>
     <OutDir>$(SolutionDir)$(Platform)\Debug\</OutDir>
+    <IntDir>$(DevelopTemp)\$(SolutionName)\$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -164,6 +167,7 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14X</TargetName>
     <OutDir>$(SolutionDir)$(Platform)\Release\</OutDir>
+    <IntDir>$(DevelopTemp)\$(SolutionName)\$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -193,6 +197,7 @@
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -243,6 +248,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -295,6 +301,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -344,6 +351,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -390,6 +398,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -439,6 +448,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -491,6 +501,7 @@ if "%~t1" NEQ "%~t2" (
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -540,6 +551,7 @@ if "%~t1" NEQ "%~t2" (
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(SolutionDir)\bin\$(Configuration)$(ThkPlatTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
